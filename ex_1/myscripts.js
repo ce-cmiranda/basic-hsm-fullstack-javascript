@@ -4,7 +4,7 @@ let combustivelValido = false
 let tipoCombustivel;
 
 while (!combustivelValido){
-    tipoCombustivel = prompt("Qual o tipo de combustível você gostaria?");
+    tipoCombustivel = prompt("Qual o tipo de combustível você gostaria Álcool (1) ou Gasolina (2) - Digite o código?");
     if (tipoCombustivel =="1" || tipoCombustivel =="2"){
         combustivelValido = true
     }
