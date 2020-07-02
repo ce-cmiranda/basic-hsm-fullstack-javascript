@@ -21,7 +21,7 @@ function criaBaralho(){
     return baralho;
 }
 
-function adivinha(){
+function exibir(){
     baralho = criaBaralho()
     
     adivinha = true;
