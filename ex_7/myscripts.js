@@ -25,3 +25,9 @@ class Turma{
     }
 }
 
+aluno1 = new Aluno("099.099.099-99", "10/10/2000", "Masculino","Maria")
+aluno2 = new Aluno("088.088.088-88", "11/11/2010", "Feminino","Daiane", "Joao")
+
+turma1 = new Turma("1", "Turma 1", "Esta é uma turma de teste", "Matutino", [aluno1])
+
+console.log(turma1.alunos_matriculados)
