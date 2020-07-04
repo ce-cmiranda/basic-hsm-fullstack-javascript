@@ -1,6 +1,7 @@
 class Aluno{
-    constructor(cpf, data_nascimento, sexo, nome_mae, nome_pai = null, email = null, telefone = null){
+    constructor(cpf,nome, data_nascimento, sexo, nome_mae, nome_pai = null, email = null, telefone = null){
         this.cpf = cpf;
+        this.nome = nome;
         this.data_nascimento = data_nascimento;
         this.sexo = sexo;
         this.nome_mae = nome_mae;
@@ -25,9 +26,20 @@ class Turma{
     }
 }
 
-aluno1 = new Aluno("099.099.099-99", "10/10/2000", "Masculino","Maria")
-aluno2 = new Aluno("088.088.088-88", "11/11/2010", "Feminino","Daiane", "Joao")
+aluno1 = new Aluno("099.099.099-99","Carlos", "10/10/2000", "Masculino","Maria")
+aluno2 = new Aluno("088.088.088-88", "Eduarda", "11/11/2010", "Feminino","Daiane", "Joao")
 
 turma1 = new Turma("1", "Turma 1", "Esta é uma turma de teste", "Matutino", [aluno1])
 
 console.log(turma1.alunos_matriculados)
+
+turma1.matricular_aluno(aluno2)
+
+let lista_matriculados = "";
+
+for (i in turma1.alunos_matriculados){
+    lista_matriculados = lista_matriculados + ("<li>CPF: "+turma1.alunos_matriculados[i].cpf+
+        " Nome:" +turma1.alunos_matriculados[i].nome+"</li>")
+}
+
+document.write("<div>Alunos matriculados na "+turma1.nome+":<ul>"+lista_matriculados+"</ul></div>")
